@@ -1,0 +1,109 @@
+===============================================================================
+AI PROMPTS AND CODE GENERATION DOCUMENTATION
+Wedding Rental Calculator
+Joshua Wimberly - December 1, 2025
+===============================================================================
+
+PROMPTS I USED WITH AI:
+===============================================================================
+
+PROMPT 1
+"I need help creating a Java program for my class project. It needs to be a 
+GUI program that calculates rental costs for tables and chairs at a wedding.
+
+The requirements are:
+- Must have a decision structure like if/else or switch statement
+- Must have a loop structure so it can run multiple times
+- Should let users choose between renting tables or chairs
+- I have a document with pricing info called SeatingInfo
+
+Can you help me build this?"
+
+
+-------------------------------------------------------------------------------
+
+PROMPT 2
+"How do I make sure my program has both the decision structure and loop 
+structure that my assignment requires?"
+
+RESULT: AI explained that I could use a switch statement to choose between 
+tables and chairs, and make the program loop by keeping the window open until 
+the user clicks exit.
+
+-------------------------------------------------------------------------------
+
+PROMPT 3
+"I looked at the SeatingInfo PDF and here's what I found:
+- Tables cost $20 each
+- Chairs cost $10 each
+- The tables are square shaped
+- You can combine them to make rectangles
+Can you update the program with these prices?"
+
+RESULT: AI updated the constants TABLE_PRICE = 20.00 and CHAIR_PRICE = 10.00.
+
+-------------------------------------------------------------------------------
+
+PROMPT 4
+"Is there a way to add a button that opens the SeatingInfo PDF so users can 
+see the pricing and table layouts? That would make it easier to use."
+
+RESULT: AI added a "View Info" button that opens the PDF file using Java's 
+Desktop API.
+
+-------------------------------------------------------------------------------
+
+PROMPT 5
+"The window seems pretty big. Can you make it more compact so it fits better 
+on the screen?"
+
+RESULT: AI reduced the window size to 500x420 pixels and made fonts smaller 
+to fit everything nicely.
+
+-------------------------------------------------------------------------------
+
+
+CODE EXPLANATION:
+===============================================================================
+
+SWITCH STATEMENT (Decision Structure):
+Located in the Calculate button code. When user clicks Calculate:
+
+switch (itemType) {
+    case "Tables":
+        pricePerItem = 20.00;
+        break;
+    case "Chairs":
+        pricePerItem = 10.00;
+        break;
+}
+
+This decides which price to use based on what the user picked.
+
+DO-WHILE LOOP (Loop Structure):
+The main program works like a do-while loop:
+- Program starts and shows window (DO)
+- User can calculate as many times as they want
+- When they click Exit, it asks "Are you sure?"
+- If NO, go back to waiting (WHILE condition = continue)
+- If YES, program ends (WHILE condition = false, exit loop)
+
+===============================================================================
+
+HOW AI HELPED ME LEARN:
+===============================================================================
+
+What I Did:
+- Wrote all the prompts asking for help
+- Provided the pricing information from the PDF
+- Asked for features I wanted (PDF button, smaller window)
+- Implemented the loop concept with exit confirmation
+- Added input validation and error message
+
+What AI Did:
+- Generated the GUI code using Java Swing
+- Created the switch statement for decision structure
+
+
+===============================================================================
+
